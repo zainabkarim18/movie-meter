@@ -5,8 +5,8 @@
 A movie evaluation project where users can rate and review films.
 
 ## Project Entity Relationship Diagram:
+![image](https://github.com/user-attachments/assets/f9bd4b95-8b4c-484c-abfc-23180815bd8a)
 
-![alt text](image.png)
 
 ## User Stories
 
