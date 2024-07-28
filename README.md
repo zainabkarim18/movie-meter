@@ -5,7 +5,6 @@
 A movie evaluation project where users can rate and review films.
 
 ## Project Entity Relationship Diagram:
-
 ![alt text](image.png)
 
 ## User Stories
