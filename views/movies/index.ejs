@@ -1,0 +1,36 @@
+  
+  <style>
+    .card{
+      border: 2px solid black;
+      margin-bottom: 20px;
+
+    }
+  </style>
+
+<%- include('../partials/head.ejs') %>
+
+  <h1>All Movies</h1>
+
+ <div class="container mt-5">
+    <div class="row">
+        <div class="col-5">
+          <% allMovies.forEach(movieList => { %>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <a href="/moveis/detail?id=<%= movieList._id %>" class="btn btn-primary">
+                    <p class="card-text"><%= movieList.title %></p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<% }) %>  
+</body> 
+
+
+
+
