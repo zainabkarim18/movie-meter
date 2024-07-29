@@ -16,7 +16,7 @@ router.post("/sign-up", async (req, res, next) => {
     const password = req.body.password;
     const email = req.body.email;
     const confirmPassword = req.body.confirmPassword;
-   
+
     try {
 
         const existingUser = await User.findOne({
@@ -48,7 +48,6 @@ router.post("/sign-up", async (req, res, next) => {
             res.redirect('/');
         });
 
-        res.send(`Thanks for signing up ${user.username}`);
     } catch (error) {
         // next(error);
         // throw new Error('something went wrong');

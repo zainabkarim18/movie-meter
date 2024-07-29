@@ -1,7 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Meter</title>
-</head>
+<%- include('../partials/head.ejs') %>
+
+<h1><%= oneMovie.title %></h1>
+
+<h4>Title: <%= oneMovie.title %></h4>
+
+<h4>genre: <%= oneMovie.genre %></h4>
+
+<h4>Description: <%= oneMovie.description %></h4>
+
+<h4>duration: <%= oneMovie.duration %></h4>
+
+<h4>language: <%= oneMovie.language %></h4> 
+
+<form action="/movies/delete/<%= oneMovie._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+    <button type="submit"><a href="/movies/edit/<%= oneMovie._id %>" style="text-decoration: none;"> edit </a></button>
+</form>
+

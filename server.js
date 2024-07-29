@@ -32,7 +32,7 @@ app.use(
     })
 );
 
-// app.use(passUserToView);
+app.use(passUserToView);
 
 app.get('/vip-lounge', isSignedIn, (req, res, next) => {
     res.send(`Welcome to the party ${req.session.user.username}.`);
@@ -43,7 +43,7 @@ app.use('/movies', movieCtrl);
 app.use('/users', userCtrl);
 
 app.get('/', (req, res, next) => {
-    const user = req.session.user;
+    user = req.session.user;
     res.render('index.ejs');
 });
 

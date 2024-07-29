@@ -12,8 +12,12 @@
 <body>
     <nav>
         <a href="">Faiverat</a>
-        <a href="/movies/add">Add Movies</a>
-        <a href="/movies">All Movies</a>
+        <% if (user&& user.role=='admin') { %>
+            <a href="/movies/add">Add Movies</a>
+            <a href="/movies">All Movies</a>
+        <% }else{ %>
+            <h1>Hi</h1>
+            <% } %>
         
     </nav>
 
