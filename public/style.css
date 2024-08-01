@@ -18,11 +18,9 @@ label{
     
         .rate-list-item:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Shadow effect on hover */
             background-color: #585a5d;
-            /* Light background on hover */
+
         }
-    
         .rate-list-item a {
             text-decoration: none;
             color: inherit;
@@ -30,7 +28,6 @@ label{
     
         .rate-list-item a:hover {
             color: #ffffff;
-            /* Optional: change text color on hover */
         }
 
 /* My Movie List Design  */

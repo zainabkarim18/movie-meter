@@ -8,11 +8,13 @@
           <a href="/movies/detail/<%= movieList._id %>" class="text-decoration-none">
             <img class="card-img-top" width="100%" height="550" src="<%= movieList.image %>" alt="<%= movieList.title %>" />
           </a>
+        <% if (user) { %>
           <div class="favorite-btn p-3">
             <form action="/movies/favorites/add/<%= movieList._id %>" method="POST">
               <button type="submit" class="btn btn-sm btn-outline-secondary btn-icon">&#x2661;</button>
             </form>
           </div>
+                            <% } %>
         </div>
       </div>
     <% }); %>
