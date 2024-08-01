@@ -18,16 +18,6 @@ const userSchema = mongoose.Schema({
         // required: true,
         default: 'user'
     },
-    movies: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:'Movie'
-    }],
-    ratings:[{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'rate'
-    }]
-
-
 });
 
 const User = mongoose.model('User', userSchema);

@@ -24,9 +24,15 @@ const movieSchema = mongoose.Schema({
     language: {
         type: String,
         required: true,
-    },
-
-    
+    }, 
+    rates: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Rate'
+    }],
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 })
 
 const Movie = mongoose.model('Movie', movieSchema);

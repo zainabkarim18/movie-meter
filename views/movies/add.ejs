@@ -1,12 +1,12 @@
 <%- include('../partials/head.ejs') %>
-
-<div class="container">
-    <form action="/movies/add" method="POST">
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Add Movie</h1>
+    <form action="/movies/add" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control" id="title" name="title" required>
         </div>
-        
+      
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
@@ -22,17 +22,21 @@
             <input type="text" class="form-control" id="duration" name="duration" required>
         </div>
 
-        <div class="mb-3">
-            <label for="language" class="form-label">Language</label>
-            <input type="text" class="form-control" id="language" name="language" required>
-        </div>
+      <div class="mb-3">
+        <label for="language" class="form-label">Language</label>
+        <input type="text" class="form-control" id="language" name="language" required>
+      </div>
 
-        <div class="mb-3">
-            <label for="image" class="form-label">Image</label>
-            <input type="file" class="form-control" id="image" name="image">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" class="form-control" id="image" name="image">
+      </div>
+
+      <!-- <input type="hidden" value="<%= user._id %>" name="owner"> -->
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary w-40">Submit</button>
+      </div>
     </form>
-</div>
-
-</body>
+  </div>
+<%- include('../partials/footer.ejs') %>

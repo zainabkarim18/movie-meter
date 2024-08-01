@@ -1,0 +1,22 @@
+<%- include('../partials/head.ejs') %>
+<style>
+
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">My List</h1>
+    
+    <% movies.forEach(favorieList => { %>
+      <div class="movie-item">
+        <a href="/movies/detail/<%= favorieList._id %>">
+          <h4>Title: <%= favorieList.title %></h4>
+        </a>
+        <form action="/movies/favorites/delete/<%= favorieList._id %>?_method=DELETE" method="POST" class="delete-btn">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    <% }) %>
+
+  </div>
+<%- include('../partials/footer.ejs') %>

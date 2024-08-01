@@ -2,3 +2,164 @@ body{
     color:aliceblue;
     background-color: black;
 }
+
+label{
+    font-size: 20px;
+}
+
+/* My rate Design  */
+
+.rate-list-item {
+    border: 1px solid #ddd;
+    border-radius: 0.375rem;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+    
+        .rate-list-item:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Shadow effect on hover */
+            background-color: #585a5d;
+            /* Light background on hover */
+        }
+    
+        .rate-list-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+    
+        .rate-list-item a:hover {
+            color: #ffffff;
+            /* Optional: change text color on hover */
+        }
+
+/* My Movie List Design  */
+        .movie-item {
+            border: 1px solid #ddd;
+            border-radius: 0.375rem;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            position: relative;
+
+        }
+    
+        .movie-item:hover {
+            background-color: #585a5d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .movie-item a {
+            text-decoration: none;
+                color: #ddd;
+
+        }
+    
+        .movie-item a:hover {
+            color: ffffff;
+        }
+    
+        .delete-btn {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+        }
+
+
+/* All Movie */
+ .container {
+     padding-top: 2rem;
+ }
+
+ .card {
+     border: none;
+     border-radius: 0.5rem;
+     background-color: #333;
+     color: #fff;
+     position: relative;
+    overflow: hidden;
+ }
+
+ .card-img-top {
+     border-radius: 0.5rem;
+     object-fit: cover;
+ }
+
+ .card-body {
+     padding: 1.25rem;
+ }
+
+ .card-text {
+     font-size: 1.1rem;
+     font-weight: 500;
+ }
+
+ .btn-outline-secondary {
+     border-color: #007bff;
+     color: #007bff;
+ }
+
+ .btn-outline-secondary:hover {
+     background-color: #007bff;
+     color: #fff;
+ }
+
+ .favorite-btn {
+     position: absolute;
+     top: 15px;
+     left: 15px;
+     z-index: 1;
+ }
+
+ .card-footer {
+     background: none;
+     border: none;
+     padding: 0;
+     margin: 0;
+     text-align: left;
+ }
+
+ .text-decoration-none {
+     text-decoration: none;
+ }
+
+ .btn-icon {
+     font-size: 1.5rem;
+     width: 2.5rem;
+     height: 2.5rem;
+ }
+
+
+ /* detail */
+
+   .ratings-container {
+       padding: 15px;
+       border-radius: 8px;
+   }
+
+   .ratings-container ul {
+       padding-left: 0;
+   }
+
+   .ratings-container li {
+       padding: 10px 0;
+   }
+
+   .ratings-container .comment-box {
+       border: 1px solid #ddd;
+       border-radius: 5px;
+       padding: 10px;
+   }
+
+   .ratings-container h2,
+   .ratings-container h4 {
+       margin-bottom: 10px;
+   }
+
+   .ratings-container p {
+       margin-bottom: 0;
+   }
+
+   .ratings-container .list-unstyled {
+       border-bottom: none;
+   }

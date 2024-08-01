@@ -1,36 +1,23 @@
-  
-  <style>
-    .card{
-      border: 2px solid black;
-      margin-bottom: 20px;
-
-    }
-  </style>
-
 <%- include('../partials/head.ejs') %>
-
-  <h1>All Movies</h1>
-
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-5">
-          <% allMovies.forEach(movieList => { %>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <!-- <h5 class="card-title">Card title</h5> -->
-                    <a href="/movies/detail/<%= movieList._id %>" class="btn btn-primary">
-                    <p class="card-text"><%= movieList.title %></p>
-                    </a>
-                </div>
-
-            </div>
+  <h1 class="mb-4 text-center">All Movies</h1>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <% allMovies.forEach(movieList => { %>
+      <div class="col">
+        <div class="card shadow-sm">
+          <a href="/movies/detail/<%= movieList._id %>" class="text-decoration-none">
+            <img class="card-img-top" width="100%" height="550" src="<%= movieList.image %>" alt="<%= movieList.title %>" />
+          </a>
+          <div class="favorite-btn p-3">
+            <form action="/movies/favorites/add/<%= movieList._id %>" method="POST">
+              <button type="submit" class="btn btn-sm btn-outline-secondary btn-icon">&#x2661;</button>
+            </form>
+          </div>
         </div>
-    </div>
+      </div>
+    <% }); %>
+  </div>
 </div>
-<% }) %>  
-</body> 
 
 
-
-
+<%- include('../partials/footer.ejs') %>

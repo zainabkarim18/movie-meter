@@ -1,0 +1,46 @@
+
+<%- include('../partials/head.ejs') %>
+ <div class="container mt-5">
+    <h2 class="text-center mb-4">Rate and Comment Movie</h2>
+    <form action="/movies/rates/add/" method="POST">
+      <div class="mb-3">
+        <label class="form-label">Rate:</label>
+        <div class="d-flex flex-wrap">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rate" id="rate1" value="1">
+            <label class="form-check-label" for="rate1">1 star</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rate" id="rate2" value="2">
+            <label class="form-check-label" for="rate2">2 stars</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rate" id="rate3" value="3">
+            <label class="form-check-label" for="rate3">3 stars</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rate" id="rate4" value="4">
+            <label class="form-check-label" for="rate4">4 stars</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rate" id="rate5" value="5">
+            <label class="form-check-label" for="rate5">5 stars</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="comment" class="form-label">Comment</label>
+        <textarea name="comment" class="form-control" id="comment" rows="4" placeholder="Write your comment here..."></textarea>
+      </div>
+
+      <input type="hidden" name="movie" value="<%= movieId %>">
+      <input type="hidden" name="rateid" value="<%= rates._id %>">
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <%- include('../partials/footer.ejs') %>

@@ -1,0 +1,17 @@
+<%- include('../partials/head.ejs') %>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">My Rate List</h1>
+        
+        <% rate.forEach(r => { %>
+            <div class="rate-list-item">
+                <a href="/movies/detail/<%=r.movie._id%>">
+                    <h4>Movie: <%= r.movie.title %></h4>
+                    <p><strong>Rate:</strong> <%= r.rate %> stars</p>
+                    <p><strong>Comment:</strong> <%= r.comment %></p>
+                </a>
+            </div>
+        <% }) %>
+    </div>
+
+
+    <%- include('../partials/footer.ejs') %>
