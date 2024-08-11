@@ -37,12 +37,21 @@ A movie evaluation project where users can rate and review films.
   - EJS
   - Multer
   - Cloudinary
+  - CSS
+  - HTML
+  - Bootstrap
   - Express-session
 
 ## Screenshots
+
+![image](https://github.com/user-attachments/assets/cda0f612-8abc-4226-9346-bc69c105883e)
+![image](https://github.com/user-attachments/assets/ff153d1d-2709-4229-be74-fb3f716f5d22)
 
 ## Future Features
 
 - Include search functionalities
 - Include filter functionalities
 - Enhancing UI/UX
+- 
+## Link
+The project itself was deployed and can be viewed [here](https://movie-meter-455c1b215309.herokuapp.com/)
